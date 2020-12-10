@@ -16,8 +16,15 @@ The Fourier Transform is a mathematical technique that decomposes a function int
 &nbsp;<br>&nbsp;
 
 ## Live Demos
-https://mindlabordev.github.io/DFT-Machine/
 
-https://www.openprocessing.org/sketch/943646
+&nbsp;<br>&nbsp;
+
+<a href="https://mindlabor.dev/">
+  <img align="center" src="https://raw.githubusercontent.com/MindLaborDev/MindLaborDev/master/preview/dft.svg" />
+</a>
+
+&nbsp;<br>&nbsp;
+
+Open Processing: https://www.openprocessing.org/sketch/943646
 <br>
 &nbsp;
