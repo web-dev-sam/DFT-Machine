@@ -8,21 +8,25 @@ let   VELO = 0.01,
 let vertices = [];
 let renderer;
 let font;
+let fpsWrapper = document.getElementById("fps");
 
 function preload() {
   font = loadFont("Quicksand.ttf");
 }
 
 function setup() {
-  createCanvas(800, 800);
-  frameRate(35);
+  createCanvas(document.body.offsetWidth, document.body.offsetHeight);
   
   // Render fourier text
-  const points = font.textToPoints("Fourier", -width/2 + 50, -height/2 + 420, 192, {
+  let points = font.textToPoints("Fourier", 0, 0, 192, {
     sampleFactor: 0.6
   });
+  
+  const minX = points.reduce((min, p) => p.x < min ? p.x : min, points[0].x);
+  const maxX = points.reduce((max, p) => p.x > max ? p.x : max, points[0].x);
+  const w = maxX - minX;
+  points = points.map(({x, y}) => ({x: x-w/2, y}));
   vertices = points.map(p => new Complex(p.x / SCALE, p.y / SCALE));
-  //print("Vertices: ", vertices.length);
   
   // Calc DFT and initiate animation
   renderer = new Renderer(DFT(), vertices);
@@ -37,6 +41,9 @@ function draw() {
   if (renderer) {
     renderer.render();
   }
+  
+  if (frameCount % 30 === 1)
+    fpsWrapper.innerHTML = `FPS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${~~frameRate()}<br>Points:&nbsp;&nbsp; ${renderer.epicycles.length}`;
 }
 
 function mouseClicked() {
