@@ -18,7 +18,7 @@ The Fourier Transform is a mathematical technique that decomposes a function int
 ## Live Demos
 
 <a href="https://mindlabordev.github.io/DFT-Machine/">
-  <img align="center" width="600" src="https://raw.githubusercontent.com/MindLaborDev/MindLaborDev/master/preview/Group 4.png" />
+  <img align="center" width="90%" src="https://raw.githubusercontent.com/MindLaborDev/MindLaborDev/master/preview/Group 4.png" />
 </a>
 
 &nbsp;<br>&nbsp;
