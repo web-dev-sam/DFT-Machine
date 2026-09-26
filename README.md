@@ -9,6 +9,9 @@ _A machine that uses Discrete Fourier Transformations (DFT) to draw anything you
 
 &nbsp;
 
+## Why does this exist?
+I wanted to see the Fourier-circles trick from the 3Blue1Brown/Mathologer videos draw my own scribbles.
+
 ## How it looks
 
 <img src="https://raw.githubusercontent.com/MindLaborDev/DFT-Machine/main/preview.jpg" width="600" />
